@@ -1,10 +1,21 @@
 <div align="center">
-  <table border="0">
+  <table border="0" width="400px">
     <tr>
-      <td align="center" colspan="2"></td>
+      <td align="center" colspan="2">Minesweeper Login</td>
     </tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
+    <tr>
+      <td align="left" width="30%">Email Address</td>
+      <td width="70%"><input name="email" type="text" [(ngModel)]="email" /></td>
+    </tr>
+    <tr *ngIf="showName">
+      <td align="left" width="30%">Full Name</td>
+      <td width="70%"><input name="name" type="text" [(ngModel)]="name" /></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td align="right" colspan="2"><button (click)="onSubmit()">{{ (showName) ? 'Submit' : 'Next' }}</button></td>
+    </tr>
   </table>
 </div>
