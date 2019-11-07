@@ -48,7 +48,7 @@ class BoardClass
       {
         if ($this->insideBounds($row + $i, $col + $j))
         {
-          if ($this->board[$row + $i][$col + $j]->value != '*')
+          if ($this->board[$row + $i][$col + $j]->value == '*')
           {
             $c++;
           }
