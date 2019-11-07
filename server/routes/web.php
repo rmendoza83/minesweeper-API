@@ -16,5 +16,8 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-
+  $router->post('game', 'GameController@new');
+  $router->get('game/{id}', 'GameController@get');
+  $router->post('game/{id}', 'GameController@play');
+  $router->put('game/{id}', 'GameController@flag');
 });
