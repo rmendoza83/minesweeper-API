@@ -20,7 +20,10 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+          "App\\": "app/",
+          "Classes\\": "app/Classes/",
+          "Constants\\": "app/Constants/",
+          "Utils\\": "app/Utils/"
         }
     },
     "autoload-dev": {
