@@ -16,8 +16,12 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
+  // Game routes
   $router->post('game', 'GameController@new');
   $router->get('game/{id}', 'GameController@get');
   $router->post('game/{id}', 'GameController@play');
   $router->put('game/{id}', 'GameController@flag');
+  // User routes
+  $router->post('user', 'UserController@login');
+  $router->put('user/{id}', 'UserController@update');
 });
