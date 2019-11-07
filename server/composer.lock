@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91fc8c41226ea4e534ebfc160f2acc8c",
+    "content-hash": "b7d2c6a7ef6b84e6d06ce5f2d49c55f4",
     "packages": [
+        {
+            "name": "davidhoeck/laravel-jsonmapper",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidhoeck/laravel-jsonmapper.git",
+                "reference": "05b4bb624cc0c356320368e081dcc93f10d56587"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidhoeck/laravel-jsonmapper/zipball/05b4bb624cc0c356320368e081dcc93f10d56587",
+                "reference": "05b4bb624cc0c356320368e081dcc93f10d56587",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DavidHoeck\\LaravelJsonMapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Höck",
+                    "email": "d.hoeck@alpin11.at"
+                }
+            ],
+            "description": "Map JSON Responses to PHP Models",
+            "time": "2019-02-26T13:58:10+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.3.0",
