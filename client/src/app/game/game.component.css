@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 40px;
+}
+
+button {
+  background: steelblue;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.cell {
+  background: steelblue;
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+}

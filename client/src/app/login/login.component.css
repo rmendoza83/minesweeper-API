@@ -8,20 +8,24 @@
   color: gray;
   font-family: 'Ubuntu', sans-serif;
 }
+
 table {
   border: 0px;
   width: 400px;
   margin: 20px;
 }
+
 H3 {
   padding: 20px;
 }
+
 input {
   width: 100%;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
   height: 40px;
 }
+
 button {
   background: steelblue;
   border-radius: 4px;

@@ -37,6 +37,7 @@ export class LoginComponent {
             if (this.userModel.new_user) {
               this.showName = true;
             } else {
+              localStorage.setItem('User', JSON.stringify(this.userModel));
               this.router.navigate(['game']);
             }
           }
@@ -49,6 +50,7 @@ export class LoginComponent {
         .subscribe((response: IAPIResponse) => {
           if (response.statusCode == API_RESPONSE.OK) {
             this.userModel = response.data as UserModel;
+            localStorage.setItem('User', JSON.stringify(this.userModel));
             this.router.navigate(['game']);
           }
         });

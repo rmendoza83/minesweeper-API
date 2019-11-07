@@ -1,1 +1,65 @@
-<p>game works!</p>
+<div class="container">
+  <table border="0" width="75%">
+    <tr>
+      <td colspan="2" width=50%>
+        <table border="0" width=100%>
+          <tr>
+            <td align="center" colspan="2">New Game</td>
+          </tr>
+          <tr>
+            <td align="right">Rows:</td>
+            <td align="left"><input name="rows" type="text" [(ngModel)]="rows" /></td>
+          </tr>
+          <tr>
+            <td align="right">Cols:</td>
+            <td align="left"><input name="cols" type="text" [(ngModel)]="cols" /></td>
+          </tr>
+          <tr>
+            <td align="right">Mines:</td>
+            <td align="left"><input name="mines" type="text" [(ngModel)]="mines" /></td>
+          </tr>
+          <tr>
+            <td align="right" colspan="2"><button (click)="onNewGame()">New Game</button></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="2" width="50%">
+        <table border="0" width="100%">
+          <tr>
+            <td align="center" colspan="2">Load Game</td>
+          </tr>
+          <tr>
+            <td align="right">Game Id:</td>
+            <td align="left"><input name="gameId" type="text" [(ngModel)]="gameId" /></td>
+          </tr>
+          <tr>
+            <td align="right" colspan="2"><button (click)="onLoadGame()">Load Game</button></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" width="100%">
+        <table border="0" width="auto" *ngIf="gameLoaded">
+          <tr>
+            <td align="right" width="30%">Game ID:</td>
+            <td align="left" width="70%"><b>{{ game?.id }}</b></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table border="0" width="auto">
+                <ng-container *ngFor="let rows of game?.board.board">
+                  <tr>
+                    <td *ngFor="let cell of rows">
+                      <button (click)="onCellClick(cell.row, cell.col)" class="cell">{{ (cell.revealed) ? cell.value : '' }}</button>
+                    </td>
+                  </tr>
+                </ng-container>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
