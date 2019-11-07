@@ -4,17 +4,8 @@ namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
-
-/*
-use Laravel\Lumen\Routing\Controller as BaseController;
-use Illuminate\Http\Request;
-use App\GameModel;
-use App\GameDetailModel;
-use Classes\BoardClass;
+use App\UserModel;
 use Utils\APIResponseResult;
-use Carbon\Carbon as Carbon;
-use PHPUnit\Runner\Exception;
-*/
 
 class UserController extends BaseController
 {
@@ -22,11 +13,13 @@ class UserController extends BaseController
   {
     try
     {
-      $userModel = UserModel::where('email',$request->email)
+      $userModel = UserModel::where('email', $request->email)
         ->first();
       if (!$userModel)
       {
         //Registering the new user
+        $userModel = new UserModel;
+        $userModel->email = $request->email;
         $userModel->name = "";
         $userModel->new_user = true;
         $userModel->save();
