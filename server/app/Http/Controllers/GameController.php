@@ -88,6 +88,7 @@ class GameController extends BaseController
           $gameModel->won = false;
           $gameModel->end_datetime = $mytime->toDateTimeString();
         }
+        $gameModel->board = json_encode($board);
         $gameModel->save();
         // Saving the Game Detail
         $newGameDetailModel = new GameDetailModel;
@@ -121,6 +122,7 @@ class GameController extends BaseController
         $board = new BoardClass;
         $board->fromJSON($gameDetailModel->new_board_state);
         $board->flag($request->row, $request->col);
+        $gameModel->board = json_encode($board);
         $gameModel->save();
         // Saving the Game Detail
         $newGameDetailModel = new GameDetailModel;

@@ -15,7 +15,8 @@ class UserSeeder extends Seeder
     DB::table('users')->delete();
     DB::table('users')->insert([
       'email' => 'minesweeper@local',
-      'name' => 'Test User'
+      'name' => 'Test User',
+      'new_user' => false
     ]);
   }
 }
