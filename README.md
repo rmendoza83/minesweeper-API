@@ -1,7 +1,7 @@
 # minesweeper-API
 Minesweeper Game using PHP framework Laravel/Lumen as backend and Angular 8 as frontend
 
-[Testing server](https://minesweeper.sophie-ware.com/)
+[Testing server](https://minesweeper.sophie-ware.fun/)
 
 ## The Game
 Develop the classic game of [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game))
